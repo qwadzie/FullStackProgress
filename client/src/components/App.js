@@ -25,7 +25,7 @@ class App extends Component {
     alert("resize event")
   }
   handleFocus() {
-    alert("Focus event")
+    console.log("<><><><><><>>>--->Focus event")
   }
   render() {
     return (
