@@ -6,8 +6,9 @@ import * as actions from '../actions'
 import Header from './Header';
 import Body from './Body'
 
+const Lander = ()=><h2>Lander....</h2>
 const Dashboard = ()=><h2>Dashboard</h2>
-const SurveyNew = ()=><Header /> //<div><div><Header /></div><h2>SurveyNew</h2></div>
+const SurveyNew = ()=><h2>SurveyNew</h2>
 
 class App extends Component {
   componentWillUnmount() {
@@ -24,6 +25,20 @@ class App extends Component {
       this.props.fetchUser();
   }
   render() {
+    return (
+    <div className='container'>
+    <BrowserRouter>
+    <div>
+    <Header />
+    <Route path="/" exact component={Lander} />
+    <Route path="/surveys" exact component={Dashboard} />
+    <Route path="/surveys/new" component={SurveyNew} />
+    </div>
+    </BrowserRouter>
+    </div>
+    );
+}
+  renderxxx() {
       switch (this.props.auth) {
       case false:
       case null:
