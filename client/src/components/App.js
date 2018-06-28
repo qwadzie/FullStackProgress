@@ -25,6 +25,9 @@ class App extends Component {
       this.props.fetchUser();
   }
   render() {
+    return (<div className='containter'><BrowserRouter><div><Header /><Body /></div></BrowserRouter></div>);
+  }
+  renderyyy() {
     return (
     <div className='container'>
     <BrowserRouter>
